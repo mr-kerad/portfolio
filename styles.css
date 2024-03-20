@@ -785,6 +785,14 @@ p {
   font-size: 16px;
 }
 
+.hero {
+  margin: 100px 0 100px 0;
+}
+
+.m-links {
+  min-width: 160px;
+}
+
 .block-m {
   height: calc(140px * 3);
 }
@@ -803,6 +811,14 @@ h1 {
   font-size: 40px;
 }
 
+.hero {
+  margin: 100px 0 0 0;
+}
+
+.text-box {
+  padding: 0 30px;
+}
+
 .block-m {
   width:45%;
 }
@@ -816,12 +832,18 @@ h1 {
 #right {
   display: none;
 }
-   body,
+   body {
+    width: 100%;
+    max-width: 937px;
+    margin: 0 auto;
+  }
+
   .body-size {
     width: 100%;
     max-width: 937px;
-    margin: 0 0 0 10px;
+    margin-left: 10px;
   }
+
 
   .hero {
     margin-top: 0;
@@ -835,7 +857,7 @@ h1 {
 
 /*Początek sekcji Delivery Approach.*/
 .mid {
-  margin: 0 20px 0 0;
+  margin: 0 20px 0 20px;
 }
 
 .box-mid {
@@ -862,9 +884,9 @@ header {
   display: flex;
   position: fixed;
   width: 100%;
-  align-items: center;
-  top: 90%;
-  height: 10%;
+  margin: 0 auto;
+  top: 88%;
+  height: 12%;
   z-index: 1000;
   padding: 10px 0 10px 0;
   box-shadow: inset -1px -1px 1px 0 rgba(255, 255, 255, .8),
@@ -872,7 +894,12 @@ header {
 }
 
 .nav-mobile {
-  display: inline-block;
+  display: flex;
+}
+
+nav {
+  display:flex;
+
 }
 
 .nav-mobile img {
@@ -884,6 +911,8 @@ header {
   display: flex;
   border-radius: 50%;
   padding: 10px 10px;
+  margin: 0 30px 10px 30px;
+  margin-bottom: 10px;
   box-shadow:  -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
   transition: all ease-in-out 0.3s;
 }
@@ -914,10 +943,18 @@ header {
 }
 
 @media only screen and (max-width: 425px) {
-  body,
- .body-size {
-   width: 100%;
-   max-width: 425px;
+
+
+body {
+  width: 100%;
+  max-width: 425px;
+  margin: 0 auto;
+}
+
+.body-size {
+  width: 100%;
+  max-width: 425px;
+  margin-left: 10px;
 }
 
 h3 {
