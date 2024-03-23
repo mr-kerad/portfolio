@@ -9,10 +9,10 @@
   <link rel="icon" href="./assets/logo.png" type="image/x-icon">
 </head>
   <body>
-
-		<!-- POCZĄTEK SEKCJI MENU -->
+		<!-- Sekcja menu top -->
 		<header>
-			<div class="menu nav-desktop">	
+			<div class="menu nav-desktop">
+				<div class="nav-left">
 				<a id="logo" href="#">		
 					<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 100 100">
 					<!-- Top face -->
@@ -27,43 +27,58 @@
 					<!-- Bottom face -->
 					<polygon points="10,90 90,90 80,80 20,80" fill="#27ae60" />
 				  </svg></a>
-				<nav>
+				</div>
+				<div class="nav-right">		
+					<nav>
 						<a href="#">Work</a>
 						<a href="#">About</a>
 						<a href="#">Contact</a>
 				</nav>
 				<div class="vertical-divider"></div>
-				<div id="social-top">
+				<div class="social-top">
 					<a href="https://linkedin.com/in/dariusz-kasperowicz-a9242b189" target="_blank"><img src="./assets/in.png"></a>
 					<a href="https://www.facebook.com/mr.kasperowicz" target="_blank"><img src="./assets/f.png"></a>
 				</div>
+				</div>	
 			</div>
 			<div class="horizontal-divider nav-desktop"></div>
+			<!-- Sekcja menu bottom - mobile -->
 			<div class="nav-mobile">
 				<nav>
-						<a href=""><img src="./assets/home.png"></a>
-						<a href=""><img src="./assets/work.png"></a>
-						<a href=""><img src="./assets/about.png"></a>
-						<a href=""><img src="./assets/contact.png"></a>
+						<a href="">
+							<img src="./assets/home.png">
+							<p>Home</p>
+						</a>
+						<a href="">
+							<img src="./assets/work.png">
+							<p>Work</p>
+						</a>
+						<a href="">
+							<img src="./assets/about.png">
+							<p>About</p>
+						</a>
+						<a href="">
+							<img src="./assets/contact.png">
+							<p>Contact</p>
+						</a>
 				</nav>
 			</div>	
 		</header>
-		<!-- KONIEC SEKCJI MENU -->
   
-		<!-- SEKCJA START -->
+		<!-- Sekcja hero -->
 <div class="body-size">
-	<div class="hero">
+	<section class="hero">
 		<div id="left" class="hidden">
 			<h1>Unleash Your Digital Potential<span id="dot">.</span></h1>
 			<p>I specialize in designing websites that truly encapsulate the spirit of your business. Let's work together to bring your brand vision to life and achieve meaningful outcomes online.</p>
 		<div class="button">
 			<button class="btn"> Let's work together </button>
-			<div class="more">More about me &rarr;</div>
+			<button class="neu-button pressed">More about me</button>
 		</div>
 			</div>
 		<div id="right" class="hidden">
-			<div class="block-m">
-				<div class="gallery-d">
+			<div class="carousel">
+				<div class="gallery-a">
 					<div class="gallery-image">
 						<div class="text-box">
 							<h4>Responsive design</h4>
@@ -106,8 +121,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="block-m">
-				<div class="gallery-u">
+			<div class="carousel">
+				<div class="gallery-b">
 					<div class="gallery-image">
 						<div class="text-box">
 							<h4>Automatic updates</h4>
@@ -151,183 +166,181 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
   <div class="horizontal-divider"></div>
   <!-- POCZĄTEK SEKCJI SERVICES -->
-  <div class="title">
-	<h2 class="hidden">Services<span id="dot">.</span></h2>
-	<p class="hidden"> Let's collaborate to bring your vision to life and ensure your website stands out in today's competitive digital landscape.</p>
-</div>
+	<div class="title">
+		<h2 class="hidden">Services<span id="dot">.</span></h2>
+		<p class="hidden"> Let's collaborate to bring your vision to life and ensure your website stands out in today's competitive digital landscape.</p>
+	</div>
 
-<div class="min">
-	<div class="box-min hidden">
-		<img src="./assets/web.svg">
-		<h3>Web development</h3>
-		<p>I specialize in crafting visually appealing and functionally robust online experiences. Whether you're seeking modern design or powerful functionality, I am here to elevate your web presence. </p>
-		<a href="#">Contact me &rarr;</a>
+	<section class="services">
+		<div class="services-box-min hidden">
+			<img src="./assets/web.svg">
+			<h3>Web development</h3>
+			<p>I specialize in crafting visually appealing and functionally robust online experiences. Whether you're seeking modern design or powerful functionality, I am here to elevate your web presence. </p>
+			<a href="#">Contact me &rarr;</a>
+		</div>
+		<div class="services-box-min hidden">
+			<img src="./assets/seo.svg">		
+			<h3>SEO optimization</h3>
+			<p>I offer effective strategies tailored to your needs, enhancing the visibility of your website. Gain a competitive edge and establish a strong online foundation for your business. </p>
+			<a href="#">Contact me &rarr;</a>
+		</div>
+		<div class="services-box-min hidden">
+			<img src="./assets/improvement.svg">		
+			<h3>Website improvement</h3>
+			<p>Elevate your online presence with comprehensive website improvement solutions. From enhancing user experience to optimizing performance and implementing cutting-edge design.</p>
+			<a href="#">Contact me &rarr;</a>
+		</div>
+		<div class="services-box-min hidden">
+			<img src="./assets/branding.svg">
+			<h3>Branding Strategy</h3>
+			<p>Develop a compelling brand strategy that resonates with your audience. I specialize in creating unique and memorable brand identities to set you apart in the market.</p>
+			<a href="#">Contact me &rarr;</a>
+		</div>
+	</section>
+	<div class="horizontal-divider"></div>
+	<!-- Początek sekcji Trusted companies. -->
+	<h3 class="hidden">Trusted by companies all over the world<span id="dot">.</span></h3>
+	<p>With clients hailing from every corner of the globe, I'm honored by the trust they place in my services.</p>
+	<div class="trusted-slider hidden">
+		<div class="slide-track">
+			<div class="slide">
+				<img src="./assets/1.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/2.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/3.png" alt="" /> 
+			</div>
+			<div class="slide">
+				<img src="./assets/4.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/5.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/6.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/7.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/1.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/2.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/3.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/4.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/5.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/6.png" alt="" />
+			</div>
+			<div class="slide">
+				<img src="./assets/7.png" alt="" />
+			</div>
+		</div>
 	</div>
-	<div class="box-min hidden">
-		<img src="./assets/seo.svg">		
-		<h3>SEO optimization</h3>
-		<p>I offer effective strategies tailored to your needs, enhancing the visibility of your website. Gain a competitive edge and establish a strong online foundation for your business. </p>
-		<a href="#">Contact me &rarr;</a>
-	</div>
-	<div class="box-min hidden">
-		<img src="./assets/improvement.svg">		
-		<h3>Website improvement</h3>
-		<p>Elevate your online presence with comprehensive website improvement solutions. From enhancing user experience to optimizing performance and implementing cutting-edge design.</p>
-		<a href="#">Contact me &rarr;</a>
-	</div>
-	<div class="box-min hidden">
-		<img src="./assets/branding.svg">
-		<h3>Branding Strategy</h3>
-		<p>Develop a compelling brand strategy that resonates with your audience. I specialize in creating unique and memorable brand identities to set you apart in the market.</p>
-		<a href="#">Contact me &rarr;</a>
-	</div>
-</div>
-<!-- Początek sekcji Trusted companies. -->
-<h3 class="hidden">Trusted by companies all over the world<span id="dot">.</span></h3>
-<p>With clients hailing from every corner of the globe, I'm honored by the trust they place in my services.</p>
-<div class="slider hidden">
-	<div class="slide-track">
-		<div class="slide">
-			<img src="./assets/1.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/2.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/3.png" alt="" /> 
-		</div>
-		<div class="slide">
-			<img src="./assets/4.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/5.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/6.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/7.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/1.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/2.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/3.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/4.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/5.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/6.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="./assets/7.png" alt="" />
-		</div>
-	</div>
-</div>
-<div class="horizontal-divider"></div>
-  <!-- KONIEC SEKCJI SERVICES -->
+	<div class="horizontal-divider"></div>
+	<!-- KONIEC SEKCJI SERVICES -->
 
-  <div class="title">
-	<h2 class="hidden">Delivery Approach<span id="dot">.</span></h2>
-	<p class="hidden">While crafting your website, we'll embark on a journey of iterative design and development, refining the concept through multiple stages to ensure we capture your vision and objectives effectively.</p>
-</div>
-<!-- Sekcja Delivery Approach -->
+	<div class="title">
+		<h2 class="hidden">Delivery Approach<span id="dot">.</span></h2>
+		<p class="hidden">While crafting your website, we'll embark on a journey of iterative design and development, refining the concept through multiple stages to ensure we capture your vision and objectives effectively.</p>
+	</div>
+	<!-- Sekcja Delivery Approach -->
 
-<div class="mid">
-	<div class="box-mid hidden">
-		<div class="loader-1">
-			<div class="circle"></div>
+	<div class="delivery">
+		<div class="box-mid hidden">
+			<div class="loader-1">
+				<div class="circle"></div>
+			</div>
+			<h3>Advanced Technology</h3>
+			<p>I use the latest and advanced technologies to make sure your website is built efficiently and effectively.</p>
+			<div class="more">Contact me &rarr;</div>
 		</div>
-		<h3>Advanced Technology</h3>
-		<p>I use the latest and advanced technologies to make sure your website is built efficiently and effectively.</p>
-		<div class="more">Contact me &rarr;</div>
-	</div>
-	<div class="box-mid hidden">
-		<div class="loader-2"></div>
-		<h3>UX and Design</h3>
-		<p>I prioritize creating a website that not only looks great but also functions seamlessly to enhance user satisfaction.</p>
-		<div class="more">Contact me &rarr;</div>
-	</div>
-	<div class="box-mid hidden">
-		<div class="loader-3">
-			<div class="round"></div>
-			<div class="square"></div>
+		<div class="box-mid hidden">
+			<div class="loader-2"></div>
+			<h3>UX and Design</h3>
+			<p>I prioritize creating a website that not only looks great but also functions seamlessly to enhance user satisfaction.</p>
+			<div class="more">Contact me &rarr;</div>
 		</div>
-		<h3>Flexible Design</h3>
-		<p>I design websites that are unique, flexible, and stand out from the competition and meet customers needs.</p>
-		<div class="more">Contact me &rarr;</div>
-	</div>
-</div>
-
-<div class="horizontal-divider"></div>
-<!-- Początek sekcji Frequently Asked Questions. -->
-<div class="title">
-	<h2 class="hidden">Frequently Asked Questions<span id="dot">.</span></h2>
-	<div class="ask">
-		<div class="box-flat hidden">
-			<div class="ask-min" id="faq-item-1">
-				<h4>How much will my project cost?</h4>
-				<img id="show-1" src="./assets/down.png">
+		<div class="box-mid hidden">
+			<div class="loader-3">
+				<div class="round"></div>
+				<div class="square"></div>
 			</div>
-			<div id="hello-1">
-				<p >Every project is unique, and the cost will vary depending on the scope, project specifications, and deadline. I'll provide custom quotes to ensure that you receive an accurate estimate for your project.</p>
-				<p>Although it is uncommon for small projects to be less than $2.000,00.</p>
-			</div>
-		</div>
-		<div class="box-flat hidden">
-			<div class="ask-min" id="faq-item-2">
-				<h4>How do I get quote for my project??</h4>
-				<img id="show-2" src="./assets/down.png">
-			</div>
-			<div id="hello-2">
-				<p >To receive an accurate quote for your project, it's important to provide as much information as possible about the project.</p>
-				<p>If you're still in the early stages and not sure what you need, I'll be happy to discuss your project with you and help you understand the costs involved. My goal is to provide you with a comprehensive understanding of your project costs so you can make informed decisions about moving forward with your project.</p>			
-			</div>
-		</div>
-		<div class="box-flat hidden">
-			<div class="ask-min" id="faq-item-3">
-				<h4>What are the payment terms for a project?</h4>
-				<img id="show-3" src="./assets/down.png">
-			</div>
-			<div id="hello-3">
-				<p >I require a 50/25/25 payment structure to the projects, with 50% paid upfront, 25% after demo version on Webflow and the remaining 25% paid after launch. This payment structure may be adjusted based on the size of the project.</p>
-				<p>I accept payments through Stripe or Crypto, and I'll work with you to choose the payment method that works best for you.</p>
-			</div>
-		</div>
-		<div class="box-flat hidden">
-			<div class="ask-min" id="faq-item-4">
-				<h4>How long does a project take?</h4>
-				<img id="show-4" src="./assets/down.png">
-			</div>
-			<div id="hello-4">
-				<p>Most projects are completed and online within 2 to 8 weeks from the start of the project. However, please keep in mind that this timeline may vary based on the complexity of the project and the amount of feedback provided.</p>
-				<p>If you need updates or new pages after the website is completed, I'm here to help on an on-demand basis.</p>
-			</div>
-		</div>
-		<div class="box-flat hidden">
-			<div class="ask-min" id="faq-item-5">
-				<h4>Do you work internationally?</h4>
-				<img id="show-5" src="./assets/down.png">
-			</div>
-			<div id="hello-5">
-				<p>Yes. I'm based in Poland but I have clients in the EU and United Kingdom.</p>
-			</div>
+			<h3>Flexible Design</h3>
+			<p>I design websites that are unique, flexible, and stand out from the competition and meet customers needs.</p>
+			<div class="more">Contact me &rarr;</div>
 		</div>
 	</div>
-</div>
 
-
-
+	<div class="horizontal-divider"></div>
+	<!-- Początek sekcji Frequently Asked Questions. -->
+	<div class="title">
+		<h2 class="hidden">Frequently Asked Questions<span id="dot">.</span></h2>
+		<div class="ask">
+			<div class="ask-box-flat hidden">
+				<div class="ask-min" id="faq-item-1">
+					<h4>How much will my project cost?</h4>
+					<img class="pressed" id="show-1" src="./assets/down.png">
+				</div>
+				<div id="hello-1">
+					<p >Every project is unique, and the cost will vary depending on the scope, project specifications, and deadline. I'll provide custom quotes to ensure that you receive an accurate estimate for your project.</p>
+					<p>Although it is uncommon for small projects to be less than $2.000,00.</p>
+				</div>
+			</div>
+			<div class="ask-box-flat hidden">
+				<div class="ask-min" id="faq-item-2">
+					<h4>How do I get quote for my project??</h4>
+					<img class="pressed" id="show-2" src="./assets/down.png">
+				</div>
+				<div id="hello-2">
+					<p >To receive an accurate quote for your project, it's important to provide as much information as possible about the project.</p>
+					<p>If you're still in the early stages and not sure what you need, I'll be happy to discuss your project with you and help you understand the costs involved. My goal is to provide you with a comprehensive understanding of your project costs so you can make informed decisions about moving forward with your project.</p>			
+				</div>
+			</div>
+			<div class="ask-box-flat hidden">
+				<div class="ask-min" id="faq-item-3">
+					<h4>What are the payment terms for a project?</h4>
+					<img class="pressed" id="show-3" src="./assets/down.png">
+				</div>
+				<div id="hello-3">
+					<p >I require a 50/25/25 payment structure to the projects, with 50% paid upfront, 25% after demo version on Webflow and the remaining 25% paid after launch. This payment structure may be adjusted based on the size of the project.</p>
+					<p>I accept payments through Stripe or Crypto, and I'll work with you to choose the payment method that works best for you.</p>
+				</div>
+			</div>
+			<div class="ask-box-flat hidden">
+				<div class="ask-min" id="faq-item-4">
+					<h4>How long does a project take?</h4>
+					<img class="pressed" id="show-4" src="./assets/down.png">
+				</div>
+				<div id="hello-4">
+					<p>Most projects are completed and online within 2 to 8 weeks from the start of the project. However, please keep in mind that this timeline may vary based on the complexity of the project and the amount of feedback provided.</p>
+					<p>If you need updates or new pages after the website is completed, I'm here to help on an on-demand basis.</p>
+				</div>
+			</div>
+			<div class="ask-box-flat hidden">
+				<div class="ask-min" id="faq-item-5">
+					<h4>Do you work internationally?</h4>
+					<img class="pressed" id="show-5" src="./assets/down.png">
+				</div>
+				<div id="hello-5">
+					<p>Yes. I'm based in Poland but I have clients in the EU and United Kingdom.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
   <!-- STOPKA -->
   <footer class="hidden">
@@ -368,7 +381,7 @@
 				</div>
 				<div class="m-links">
 						<h4>Social links</h4>
-						<div id="social">
+						<div class="social-footer">
 							<a href="https://linkedin.com/in/dariusz-kasperowicz-a9242b189" target="_blank"><img src="./assets/in.png"></a>
 							<a href="https://www.facebook.com/mr.kasperowicz" target="_blank"><img src="./assets/f.png"></a>
 						</div>
