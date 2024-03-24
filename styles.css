@@ -199,6 +199,9 @@ background-color: #dde1e7;
   max-width: 700px;
   padding: 20px 0;
 }
+#right-mobile {
+  display: none;
+}
 
 .button {
 	display: flex;
@@ -966,11 +969,74 @@ nav {
   font-size: 0.75rem;
 }
 
-/*Carousel up*/
 #right {
-  display: none;
+  display: inline-block;
+  width: 100%;
 }
 
+/* Carousel */
+.carousel {
+  width: 768px;
+  height: 100px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 0;
+}
+
+  .gallery-a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    margin: 5px 0;
+    animation: moveBottom 6s linear infinite;
+  }
+
+.gallery-b {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  margin: 5px 0;
+  animation: moveTop 6s linear infinite;
+}
+
+.gallery-image {
+  display: inline-block;
+  height: 40px;
+  min-width: 100px;
+  margin: 30px 10px;
+  padding: 20px 40px;
+}
+
+.text-box h4 {
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 0 0;
+}
+
+
+@keyframes moveTop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-49%);
+  }
+}
+@keyframes moveBottom {
+  0% {
+    transform: translateX(-49%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*hero left */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -985,7 +1051,7 @@ nav {
   width: 100%;
   flex-direction: column;
   flex: 1;
-  padding: 20px 20px;
+  padding: 20px 20px 0;
   margin: 0 20px;
   min-width: 280px;
   flex-wrap: wrap;
@@ -994,6 +1060,12 @@ nav {
 .button {
   justify-content: space-between;
 }
+
+.hero button {
+  width: 200px;
+}
+
+
 
 /*Sekcja services*/
 .services-box-min h3 {
@@ -1062,6 +1134,16 @@ nav {
   width: 100%;
   max-width: 768px;
 }
+
+
+footer svg {
+  width: 40px;
+  height: 40px; 
+}
+
+.logo-footer-mobile {
+  margin: 0 0 150px;
+}
 }
 
 @media only screen and (max-width: 425px) {
@@ -1088,16 +1170,41 @@ nav {
     width: 75%;
   }
 
+  nav a {
+    padding: 5px 5px;
+  }
+
+  nav a:focus {
+      outline: none;
+      box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+    }
+  }
+
   .nav-mobile a {
-    margin: 15px 15px;
+    margin: 10px 20px;
     
   }
   
   .nav-mobile img {
+    padding: 3px 0;
     height: 20px;
   }
   
   .nav-mobile p {
     font-size: 0.6rem;
+    margin: 0 auto;
   }
+  
+  @media only screen and (max-width: 375px) {
+    .nav-mobile a {
+      margin: 15px 15px;
+      
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .nav-mobile a {
+      margin: 10px 10px;
+      
+    }
   }
