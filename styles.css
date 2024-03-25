@@ -317,7 +317,7 @@ background-color: #dde1e7;
   }
 
   .text-box h4 {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   
@@ -326,12 +326,12 @@ background-color: #dde1e7;
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-49%);
+      transform: translateY(-50%);
     }
   }
   @keyframes moveBottom {
     0% {
-      transform: translateY(-49%);
+      transform: translateY(-50%);
     }
     100% {
       transform: translateY(0);
@@ -911,6 +911,10 @@ flex-direction: column;
   display: none;
 }
 
+.nav-mobile.active {
+  display: inline-block;
+}
+
 
 .body-size {
   display: flex;
@@ -923,9 +927,11 @@ flex-direction: column;
   }
 
 header {
-  display: flex;
+  display: inline-block;
   position: fixed;
+  justify-content: center;
   width: 100%;
+  max-width: 768px;
   margin: 0 auto;
   top: 88%;
   height: 12%;
@@ -934,28 +940,24 @@ header {
   box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
 }
 
-.nav-mobile {
-  display: flex;
-}
 
 nav {
   display: flex;
-  justify-content: space-between; 
   align-items: center;
+  width: 90%;
+  margin: 0 20px;
 }
 
-
-.nav-mobile a {
+nav a {
   display: flex;
   flex-direction: column;
   border-radius: 10%;
-  width: 40px;
-  height: 40px;
-  margin: 18px 18px;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
   align-items: center;
   border: 1px solid #d1d9e6;
-  box-shadow:  -5px -5px 9px rgba(255,255,255,0.45), 
-                5px 5px 9px rgba(94,104,121,0.3);
+  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
   transition: all ease-in-out 0.3s;
 }
 
@@ -969,12 +971,14 @@ nav {
   font-size: 0.75rem;
 }
 
+
+
+/* Carousel */
 #right {
   display: inline-block;
   width: 100%;
 }
 
-/* Carousel */
 .carousel {
   width: 768px;
   height: 100px;
@@ -1024,12 +1028,12 @@ nav {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-49%);
+    transform: translateX(-50%);
   }
 }
 @keyframes moveBottom {
   0% {
-    transform: translateX(-49%);
+    transform: translateX(-50%);
   }
   100% {
     transform: translateX(0);
@@ -1142,7 +1146,11 @@ footer svg {
 }
 
 .logo-footer-mobile {
-  margin: 0 0 150px;
+  display: flex;
+}
+
+footer p {
+  margin: 0 0 100px;
 }
 }
 
