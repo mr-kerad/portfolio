@@ -6,7 +6,7 @@ const observer = new IntersectionObserver((entries) => {
           entry.target.classList.remove('look');
       }
   });
-}, { threshold: 0.35 }); // Set the threshold to 0.35
+}, { threshold: 0.4 }); // Set the threshold to 0.35
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
@@ -48,5 +48,18 @@ document.getElementById('faq-item-4').addEventListener('click', function() {
 
 document.getElementById('faq-item-5').addEventListener('click', function() {
   bulb(5);
+});
+
+/*Header mobile */
+window.addEventListener('scroll', function() {
+  var headerMobile = document.querySelector('.nav-mobile');
+  var scrollPosition = window.scrollY;
+  var threshold = 100; // określ próg przewinięcia, po osiągnięciu którego pojawi się menu
+
+  if (scrollPosition > threshold) {
+    headerMobile.classList.add('active');
+  } else {
+    headerMobile.classList.remove('active');
+  }
 });
 
