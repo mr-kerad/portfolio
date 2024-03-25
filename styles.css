@@ -986,12 +986,12 @@ flex-direction: column;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 @keyframes moveBottom {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);
@@ -1143,7 +1143,9 @@ footer p {
   width: 130px;
 }
 
-
+.carousel {
+  width: 425px;
+}
   .services-box-min {
     min-width: 240px;
   }
@@ -1189,11 +1191,18 @@ footer p {
   width: 120px;
 }
 
+.carousel {
+  width: 375px;
+}
+
   }
 
   @media only screen and (max-width: 320px) {
     .nav-mobile a {
       margin: 10px 10px;
-      
+    }
+
+    .carousel {
+      width: 320px;
     }
   }
