@@ -997,7 +997,7 @@ flex-direction: column;
     transform: translateX(0);
   }
 }
-}
+
 
 /*hero left */
 .hero {
@@ -1163,7 +1163,7 @@ footer p {
       outline: none;
       box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
     }
-  }
+  
 
   .nav-mobile a {
     margin: 10px 20px;
@@ -1179,7 +1179,8 @@ footer p {
     font-size: 0.6rem;
     margin: 0 auto;
   }
-  
+}
+
   @media only screen and (max-width: 375px) {
     .nav-mobile a {
       margin: 15px 15px; 
