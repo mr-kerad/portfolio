@@ -926,7 +926,7 @@ flex-direction: column;
   margin: 0px auto;	
   background-color: #dde1e7;
   }
-  
+
  header {
   max-width:768px;
  }
@@ -986,12 +986,12 @@ flex-direction: column;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 @keyframes moveBottom {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
   100% {
     transform: translateX(0);
