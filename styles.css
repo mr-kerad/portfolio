@@ -926,9 +926,10 @@ flex-direction: column;
   margin: 0px auto;	
   background-color: #dde1e7;
   }
-
-
-
+  
+ header {
+  max-width:768px;
+ }
 
 /* Carousel */
 #right {
