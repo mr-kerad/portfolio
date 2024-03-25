@@ -927,7 +927,7 @@ flex-direction: column;
   }
 
 header {
-  display: inline-block;
+  display: flex;
   position: fixed;
   justify-content: center;
   width: 100%;
@@ -1065,9 +1065,13 @@ nav a {
   justify-content: space-between;
 }
 
-.hero button {
-  width: 200px;
+.button .btn,
+.button .neu-button {
+  font-size: 0.75rem;
+  padding: 10px 5px;
+  width: 150px;
 }
+
 
 
 
@@ -1170,6 +1174,14 @@ footer p {
     min-width: 260px;
   }
 
+.button .btn,
+.button .neu-button {
+  font-size: 0.75rem;
+  padding: 10px 5px;
+  width: 120px;
+}
+
+
   .services-box-min {
     min-width: 240px;
   }
@@ -1205,8 +1217,7 @@ footer p {
   
   @media only screen and (max-width: 375px) {
     .nav-mobile a {
-      margin: 15px 15px;
-      
+      margin: 15px 15px; 
     }
   }
 
