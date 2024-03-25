@@ -51,7 +51,7 @@ document.getElementById('faq-item-5').addEventListener('click', function() {
 });
 
 /*Header mobile */
-window.addEventListener('scroll', function() {
+/*window.addEventListener('scroll', function() {
   var headerMobile = document.querySelector('.nav-mobile');
   var scrollPosition = window.scrollY;
   var threshold = 100; // określ próg przewinięcia, po osiągnięciu którego pojawi się menu
@@ -62,4 +62,4 @@ window.addEventListener('scroll', function() {
     headerMobile.classList.remove('active');
   }
 });
-
+*/
