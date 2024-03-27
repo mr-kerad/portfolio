@@ -289,6 +289,7 @@ background-color: #dde1e7;
     height: 400px;
     flex-direction: column;
     overflow: hidden;
+    position:relative;
   }
 
   
@@ -297,6 +298,14 @@ background-color: #dde1e7;
       display: flex;
       flex-direction: column;
       align-items: center;
+  }
+
+  .carousel:hover .gallery-a {
+    animation-play-state: paused;
+  }
+
+  .carousel:hover .gallery-b {
+    animation-play-state: paused;
   }
 
     .gallery-a {
@@ -410,62 +419,58 @@ width: 90%;
 
 
 /* Trusted companies*/ 
-.trusted-slider {
-  margin: auto;
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
   overflow: hidden;
+  padding: 60px 0;
+  background: #dde1e7;
+  white-space: nowrap;
   position: relative;
-  width: 100%;
-  margin: 50px 0 100px 0;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s, transform 0.5s;
- }
-
- .trusted-slider {
-  opacity: 1;
-  transform: translateY(0);
+  max-width: 1440px;
+  width:100%
 }
 
-.slide img {
-  height: 100px; 
-}
-
-.trusted-slider::before, .trusted-slider::after {
-  background: linear-gradient(to right, #dde1e7 0%, rgba(255, 255, 255, 0) 100%);
-  content: "";
-  height: 100%;
+.logos:before,
+.logos:after {
   position: absolute;
-  width: 100px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
   z-index: 2;
 }
 
-.trusted-slider::after {
-  right: 0;
-  top: 0;
-  -webkit-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-}
-
-.trusted-slider::before {
+.logos:before {
   left: 0;
-  top: 0;
+  background: linear-gradient(to right, #dde1e7 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.trusted-slider .slide-track {
-  animation: scroll 40s linear infinite;
-  display: flex;
-  width: calc(250px * 5);
+.logos:after {
+  right: 0;
+  background: linear-gradient(to left, #dde1e7 0%, rgba(255, 255, 255, 0) 100%);
 }
 
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
 
-@keyframes scroll {
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-      transform: translateX(calc(-250px * 10));
-  }
-} 
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 100px;
+  margin: 0 40px;
+}
 
 /* Delivery Approach. */
 
@@ -497,6 +502,10 @@ width: 90%;
   .box-mid h3 {
     height: 50px;
     margin-top: 100px;
+  }
+
+  .box-mid a {
+    text-decoration: none;
   }
 
   .box-mid button {
@@ -816,7 +825,7 @@ flex-direction: column;
    
     #left {
       width: 50%;
-      max-width: 500px;
+      max-width: 768px;
     }
     
     #right {
@@ -1010,14 +1019,8 @@ flex-direction: column;
 }
 
 #left {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  flex: 1;
-  padding: 20px 20px 0;
-  margin: 0 20px;
-  min-width: 280px;
-  flex-wrap: wrap;
+  max-width: 768px;
+  min-width: 450px;
 }
 
 .button {
@@ -1027,8 +1030,9 @@ flex-direction: column;
 .button .btn,
 .button .neu-button {
   font-size: 0.75rem;
-  padding: 10px 5px;
-  width: 150px;
+  padding: 15px 15px;
+  margin-right: 30px;
+  width: 160px;
 }
 
 
@@ -1051,8 +1055,12 @@ flex-direction: column;
 }
 
 /*Trusted companie */
-.slide img {
-  height: 60px;
+.logos {
+  max-width: 768px;
+}
+
+.logos-slide img {
+  height: 80px;
 }
 
 /* Delivery approach */
@@ -1112,9 +1120,6 @@ footer svg {
   display: flex;
 }
 
-footer p {
-  margin: 0 0 100px;
-}
 }
 
 @media only screen and (max-width: 425px) {
@@ -1149,6 +1154,18 @@ footer p {
 }
   .services-box-min {
     min-width: 240px;
+  }
+
+  .logos:before,
+.logos:after {
+  width: 80px;
+}
+
+  .logos {
+    max-width: 425px;
+  }
+  .logos-slide img {
+    height: 60px;
   }
 
   .ask-box-flat {
@@ -1196,7 +1213,9 @@ footer p {
 .carousel {
   width: 375px;
 }
-
+.logos {
+  max-width: 375px;
+}
   }
 
   @media only screen and (max-width: 320px) {
@@ -1207,4 +1226,124 @@ footer p {
     .carousel {
       width: 320px;
     }
+
+    .logos {
+      max-width: 320px;
+    }
   }
+
+
+/* Contact */
+
+  .contact {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: 100px 0;
+      padding: 0 20px;
+    }
+  
+  .contact p {
+  width: 90%;
+  }
+  
+  .contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    gap: 20px;
+  }
+  
+  .contact-box-mini {
+   flex: 1;
+   min-width: 200px;
+   min-height: 100px;
+   border-radius: 20px;
+   padding: 10px 20px;
+   border: 1px solid #d1d9e6;
+   box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  }
+
+  .contact-box-mini h3 {
+  margin-right:15px;
+   }
+  
+  
+  .contact-label {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+  
+  }
+
+  
+  .contact-left {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 50px;
+    margin-right: 8px;
+    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  }
+  
+  .contact-right {
+    display:flex;
+    align-items: center;
+    flex: 4;
+    height: 50px;
+    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  }
+  
+  .contact-right p,
+  .contact-message p {
+    padding-left: 10px;
+  }
+  
+  .contact-message {
+    display:flex;
+    height: 200px;
+    width: 100%;
+    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  }
+  
+  .contact-box-mini button {
+    background-color: #dde1e7;
+    border-radius: 20px;
+    border: 1px solid #d1d9e6;
+    box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 20px 40px;
+    margin: 20px 20px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #dde1e7;
+  }
+  
+  .contact-box-mini button:hover {
+    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  }
+  
+  .contact-box-mini button:focus {
+    outline: none;
+    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .contact {
+      margin: 100px 0;
+  }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .contact {
+      margin: 0 auto;
+  }
+  }
+
+@media only screen and (max-width: 425px) {
+  .contact-box-mini h3 {
+    font-size: 1.5rem;
+   }
+}
