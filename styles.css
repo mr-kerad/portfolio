@@ -225,7 +225,7 @@ background-color: #dde1e7;
 	display: inline-block;
 	border-radius: 6em;
 	border: none;
-	transition: all .4s;
+	transition: all .3s;
 	color: white;
 	background-color: #6d7aff;
   box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
@@ -309,11 +309,11 @@ background-color: #dde1e7;
   }
 
     .gallery-a {
-    animation: moveBottom 6s linear infinite;
+    animation: moveBottom 12s linear infinite;
     }
 
   .gallery-b {
-    animation: moveTop 6s linear infinite;
+    animation: moveTop 12s linear infinite;
   }
 
   .gallery-image {
@@ -944,7 +944,7 @@ flex-direction: column;
     width: 100%;
     height: 90px;
     margin: 5px 0;
-    animation: moveBottom 6s linear infinite;
+    animation: moveBottom 12s linear infinite;
   }
 
 .gallery-b {
@@ -954,15 +954,15 @@ flex-direction: column;
   width: 100%;
   height: 90px;
   margin: 5px 0 200px;
-  animation: moveTop 6s linear infinite;
+  animation: moveTop 12s linear infinite;
 }
 
 .gallery-image {
   display: inline-block;
   height: 40px;
   min-width: 90px;
-  margin: 30px 10px;
-  padding: 20px 40px;
+  margin: 10px 20px;
+  padding: 15px 25px;
 }
 
 .text-box h4 {
@@ -1237,9 +1237,8 @@ footer svg {
   .contact {
       display: flex;
       flex-direction: column;
-      width: 90%;
-      margin: 100px 0;
       padding: 0 20px;
+      width: 95%;
     }
   
   .contact p {
@@ -1372,5 +1371,5 @@ footer svg {
 }
 
 #typedtext {
-  font-size: 1rem;
+  font-size: 2rem;
 }
